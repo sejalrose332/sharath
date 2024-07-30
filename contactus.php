@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -190,7 +189,7 @@
                                     $Service=$_GET['Service'];
                                     $TypeTravel=$_GET['Type Travel'];
 
-                                    $query = "INSERT INTO users(YourName, phoneNo, emailId, "Service", TypeTravel, "Date") VALUES (?, ?, ?, ?, ?, ?)";
+                                    $query = "INSERT INTO users(YourName, phoneNo, emailId, Service, TypeTravel, Date) VALUES (?, ?, ?, ?, ?, ?)";
                                                     mysqli_query($conn, $query);
                                                     header('location: contactus.php');
                                             }
