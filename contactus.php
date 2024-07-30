@@ -323,8 +323,10 @@
                                     mysqli_query($conn, $query);
                                     header('location: contactus.php');
                             }
-
+                
+                    $conn->close();
                 ?>
+                
 
 <footer class="copyrights inner">
     <div class="container">
