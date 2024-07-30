@@ -173,35 +173,6 @@
                                 </div>
                             </div>
 
-                            <?php
-                                if (isset($_GET['submit'])) {
-                                    register();
-                                    }
-                            ?>
-
-                            <?php
-                                function register(){
-                                    global $conn,$YourName,$phoneNo,$emailId,$Service,$TypeTravel;
-                                    
-                                    $dbservername = 'localhost';
-                                    $dbusername = 'root';
-                                    $dbpassword = '';
-                                    $dbname = 'enquiry';
-                                    $conn = mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
-
-                                    $YourName=$_GET['Your Name'];
-                                    $phoneNo=$_GET['Phone No.'];
-                                    $emailId=$_GET['Email Id.'];
-                                    $Service=$_GET['Service'];
-                                    $TypeTravel=$_GET['Type Travel'];
-                                    $Dates = $_GET['Date'];
-                                    $query = "INSERT INTO user(YourName, PhoneNo, EmailId, Services, TypeTravel, Dates) VALUES (?, ?, ?, ?, ?, ?)";
-                                                    mysqli_query($conn, $query);
-                                                    header('location: contactus.php');
-                                            }
-
-                                ?>
-
                             <div class="col-lg-6 responsive-column">
                                 <div class="input-box messenger-box-input-wrap">
                                     <label class="label-text" for="name">Type Travel</label>
@@ -325,6 +296,35 @@
         </div>
     </div>
 </section>
+
+            <?php
+                if (isset($_GET['submit'])) {
+                    register();
+                    }
+            ?>
+
+            <?php
+                function register(){
+                    global $conn,$YourName,$phoneNo,$emailId,$Service,$TypeTravel;
+                    
+                    $dbservername = 'localhost';
+                    $dbusername = 'root';
+                    $dbpassword = '';
+                    $dbname = 'enquiry';
+                    $conn = mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
+
+                    $YourName=$_GET['name'];
+                    $phoneNo=$_GET['phone'];
+                    $emailId=$_GET['email'];
+                    $Service=$_GET['car_error'];
+                    $TypeTravel=$_GET['travel_error'];
+                    $Dates = $_GET['date_error'];
+                    $query = "INSERT INTO user(YourName, PhoneNo, EmailId, Services, TypeTravel, Dates) VALUES (?, ?, ?, ?, ?, ?)";
+                                    mysqli_query($conn, $query);
+                                    header('location: contactus.php');
+                            }
+
+                ?>
 
 <footer class="copyrights inner">
     <div class="container">
