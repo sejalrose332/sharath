@@ -115,7 +115,7 @@
                 <div class="form-content homecontect">
                     <div class="contact-form-action">
                         <h4>Get a Quote</h4>
-                        <form class="row messenger-box-form" method="post" action="contact.php">
+                        <form class="row messenger-box-form" method="get" action="contactus.php">
                             <div class="col-lg-6 responsive-column">
                                 <div class="input-box messenger-box-input-wrap">
                                     <label class="label-text" for="name">Your Name</label>
@@ -174,6 +174,30 @@
                                 </div>
                             </div>
 
+                            <?php
+                                function register(){
+                                    global $conn,$YourName,$phoneNo,$emailId,$Service,$TypeTravel;
+                                    
+                                    $dbservername = 'localhost'
+                                    $dbusername = 'root'
+                                    $dbpassword = ''
+                                    $dbname = 'users'
+                                    $conn = mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
+
+                                    $YourName=$_GET['Your Name'];
+                                    $phoneNo=$_GET['Phone No.'];
+                                    $emailId=$_GET['Email Id.'];
+                                    $Service=$_GET['Service'];
+                                    $TypeTravel=$_GET['Type Travel'];
+
+                                    $query = "INSERT INTO users(YourName, phoneNo, emailId, "Service", TypeTravel, "Date") VALUES (?, ?, ?, ?, ?, ?)";
+                                                    mysqli_query($conn, $query);
+                                                    header('location: contactus.php');
+                                            }
+
+                                ?>
+                                <?php
+
                             <div class="col-lg-6 responsive-column">
                                 <div class="input-box messenger-box-input-wrap">
                                     <label class="label-text" for="name">Type Travel</label>
@@ -210,6 +234,7 @@
                             <div class="col-lg-12">
                                 <div class="btn-box messenger-box-input-wrap text-center">
                                     <button name="submit" type="submit" class="theme-btn send-message-btn" id="send-message-btn">Send Message</button>
+                                    <input type="submit" name="submit" onclick="myFunction()" value="Submit">
                                 </div>
                             </div>
                         </form>

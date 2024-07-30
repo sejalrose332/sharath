@@ -11,7 +11,7 @@
  if($conn->connect_error) {
     die('connection Failed : ' .$conn->connect_error);
  }else{
-    $stmt = $conn->prepare("INSERT INTO users(YourName, phoneNo, emailId, Service, TypeTravel, Date) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO users(YourName, phoneNo, emailId, "Service", TypeTravel, "Date") VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sisssi", $YourName, $phoneNo, $emailId, $Service, $TypeTravel, $Date);
     $stmt->execute();
     echo "Data inserted successfully";
