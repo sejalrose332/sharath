@@ -26,7 +26,7 @@
     <!-- <link rel="stylesheet" href="/assets/font/flaticon.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src="https://www.google.com/recaptcha/api.js"></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
 <link rel="icon" href="https://www.#.in/assets/images/c-favicon.png" type="image/x-icon"> 
     
 </head>
@@ -200,12 +200,12 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-12 text-center">
+                            <!-- <div class="col-lg-12 text-center">
                                 <div class="form-group">
                                     <div class="g-recaptcha" data-sitekey="6LdZ_YUgAAAAAJhpxSUFdrsXSfs43Op_IcrD9DsT"></div>
                                     <span id="captcha_error" class="text-danger"></span>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-lg-12">
                                 <div class="btn-box messenger-box-input-wrap text-center">
                                     <button name="submit" type="submit" class="theme-btn send-message-btn" id="send-message-btn">Send Message</button>
