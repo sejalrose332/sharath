@@ -305,7 +305,7 @@
 
             <?php
                 function register(){
-                    global $conn,$YourName,$phoneNo,$emailId,$Service,$TypeTravel;
+                    global $conn,$YourName,$phoneNo,$EmailId,$Services,$TypeTravel, $Dates;
                     
                     $dbservername = 'localhost';
                     $dbusername = 'root';
@@ -314,9 +314,9 @@
                     $conn = mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
 
                     $YourName=$_GET['name'];
-                    $phoneNo=$_GET['phone'];
-                    $emailId=$_GET['email'];
-                    $Service=$_GET['fleets'];
+                    $PhoneNo=$_GET['phone'];
+                    $EmailId=$_GET['email'];
+                    $Services=$_GET['fleets'];
                     $TypeTravel=$_GET['travel'];
                     $Dates = $_GET['date'];
                     $query = "INSERT INTO user(YourName, PhoneNo, EmailId, Services, TypeTravel, Dates) VALUES (?, ?, ?, ?, ?, ?)";
