@@ -174,6 +174,12 @@
                             </div>
 
                             <?php
+                                if (isset($_GET['submit'])) {
+                                    register();
+                                    }
+                            ?>
+
+                            <?php
                                 function register(){
                                     global $conn,$YourName,$phoneNo,$emailId,$Service,$TypeTravel;
                                     
