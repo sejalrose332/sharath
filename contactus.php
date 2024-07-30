@@ -195,7 +195,6 @@
                                             }
 
                                 ?>
-                                <?php
 
                             <div class="col-lg-6 responsive-column">
                                 <div class="input-box messenger-box-input-wrap">
