@@ -319,7 +319,7 @@
                     $Services=$_POST['fleets'];
                     $TypeTravel=$_POST['typetravel'];
                     $Dates = $_POST['date'];
-                    $query = "INSERT INTO user(YourName, PhoneNo, EmailID, Services, TypeTravel, Dates) VALUES (?, ?, ?, ?, ?, ?)";
+                    $query = "INSERT INTO user(YourName, PhoneNo, EmailID, Services, TypeTravel, Dates) VALUES ($YourName, $PhoneNo, $EmailID, $Services, $TypeTravel, $Dates)";
                                     mysqli_query($conn, $query);
                                     header('location: contactus.php');
                             }
@@ -334,7 +334,7 @@
             <div class="col-lg-12">
                 <div class="copy-right text-center">
                     <p class="copy__desc">
-                       sharath tours and travels.in © 2023 All rights reserved.<br> <small><a href="https://www.#.in/terms-and-conditions">Terms & Conditions</a></small>
+                       sharath tours and travels.in © 2023 All rights reserved.<br><small><a href="https://www.#.in/terms-and-conditions">Terms & Conditions</a></small>
                     </p>
                 </div>
             </div>
