@@ -316,9 +316,9 @@
                     $YourName=$_GET['name'];
                     $phoneNo=$_GET['phone'];
                     $emailId=$_GET['email'];
-                    $Service=$_GET['car_error'];
-                    $TypeTravel=$_GET['travel_error'];
-                    $Dates = $_GET['date_error'];
+                    $Service=$_GET['fleets'];
+                    $TypeTravel=$_GET['travel'];
+                    $Dates = $_GET['date'];
                     $query = "INSERT INTO user(YourName, PhoneNo, EmailId, Services, TypeTravel, Dates) VALUES (?, ?, ?, ?, ?, ?)";
                                     mysqli_query($conn, $query);
                                     header('location: contactus.php');
