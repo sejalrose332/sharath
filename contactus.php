@@ -152,23 +152,23 @@
                                         <span class="fa fa-cab form-icon"></span>
                                         <select name="fleets" id="fleets" class="form-control" >
                                             <option hidden="" disabled="disabled" selected="selected" value="">Select A Car</option>
-                                                                                            <option value="Sedan Cars">Sedan Cars</option>
-                                                                                                <option value="Maruti Ertiga">Maruti Ertiga</option>
-                                                                                                <option value="Toyota Innova">Toyota Innova</option>
-                                                                                                <option value="Innova Crysta">Innova Crysta</option>
-                                                                                                <option value="Maharaja Tempo Traveller">Maharaja Tempo Traveller</option>
-                                                                                                <option value="Semi-sleeper Maharaja TT">Semi-sleeper Maharaja TT</option>
-                                                                                                <option value="12 Seater Tempo Traveller">12 Seater Tempo Traveller</option>
-                                                                                                <option value="14 Seater Tempo Traveller">14 Seater Tempo Traveller</option>
-                                                                                                <option value="Force Urbania">Force Urbania</option>
-                                                                                                <option value="20 Seater Tempo Traveller">20 Seater Tempo Traveller</option>
-                                                                                                <option value="21 Seater MinBus">21 Seater MinBus</option>
-                                                                                                <option value="24 Seater Min Bus">24 Seater Min Bus</option>
-                                                                                                <option value="Luxury Bharat Benz">Luxury Bharat Benz</option>
-                                                                                                <option value="33 Seater Bus">33 Seater Bus</option>
-                                                                                                <option value="Multi Axle Volvo Bus">Multi Axle Volvo Bus</option>
-                                                                                                <option value="50 Seater Bus">50 Seater Bus</option>
-                                                                                        </select>
+                                                <option value="Sedan Cars">Sedan Cars</option>
+                                                    <option value="Maruti Ertiga">Maruti Ertiga</option>
+                                                    <option value="Toyota Innova">Toyota Innova</option>
+                                                    <option value="Innova Crysta">Innova Crysta</option>
+                                                    <option value="Maharaja Tempo Traveller">Maharaja Tempo Traveller</option>
+                                                    <option value="Semi-sleeper Maharaja TT">Semi-sleeper Maharaja TT</option>
+                                                    <option value="12 Seater Tempo Traveller">12 Seater Tempo Traveller</option>
+                                                    <option value="14 Seater Tempo Traveller">14 Seater Tempo Traveller</option>
+                                                    <option value="Force Urbania">Force Urbania</option>
+                                                    <option value="20 Seater Tempo Traveller">20 Seater Tempo Traveller</option>
+                                                    <option value="21 Seater MinBus">21 Seater MinBus</option>
+                                                    <option value="24 Seater Min Bus">24 Seater Min Bus</option>
+                                                    <option value="Luxury Bharat Benz">Luxury Bharat Benz</option>
+                                                    <option value="33 Seater Bus">33 Seater Bus</option>
+                                                    <option value="Multi Axle Volvo Bus">Multi Axle Volvo Bus</option>
+                                                    <option value="50 Seater Bus">50 Seater Bus</option>
+                                            </select>
                                         <span id="car_error" class="text-danger"></span>
                                     </div>
                                 </div>
@@ -178,10 +178,10 @@
                                 function register(){
                                     global $conn,$YourName,$phoneNo,$emailId,$Service,$TypeTravel;
                                     
-                                    $dbservername = 'localhost'
-                                    $dbusername = 'root'
-                                    $dbpassword = ''
-                                    $dbname = 'users'
+                                    $dbservername = 'localhost';
+                                    $dbusername = 'root';
+                                    $dbpassword = '';
+                                    $dbname = 'users';
                                     $conn = mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
 
                                     $YourName=$_GET['Your Name'];
