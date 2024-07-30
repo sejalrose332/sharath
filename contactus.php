@@ -186,7 +186,7 @@
                                     $dbservername = 'localhost';
                                     $dbusername = 'root';
                                     $dbpassword = '';
-                                    $dbname = 'users';
+                                    $dbname = 'enquiry';
                                     $conn = mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
 
                                     $YourName=$_GET['Your Name'];
