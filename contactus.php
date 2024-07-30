@@ -321,7 +321,7 @@
                     $Dates = $_POST['date'];
                     $query = "INSERT INTO user(YourName, PhoneNo, EmailId, Services, TypeTravel, Dates) VALUES (?, ?, ?, ?, ?, ?)";
                                     mysqli_query($conn, $query);
-                                    header('location: contactus.php');
+                                    // header('location: contactus.php');
                             }
                 
                     $conn->close();
