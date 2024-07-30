@@ -194,8 +194,8 @@
                                     $emailId=$_GET['Email Id.'];
                                     $Service=$_GET['Service'];
                                     $TypeTravel=$_GET['Type Travel'];
-
-                                    $query = "INSERT INTO users(YourName, phoneNo, emailId, Service, TypeTravel, Date) VALUES (?, ?, ?, ?, ?, ?)";
+                                    $Dates = $_GET['Date'];
+                                    $query = "INSERT INTO user(YourName, PhoneNo, EmailId, Services, TypeTravel, Dates) VALUES (?, ?, ?, ?, ?, ?)";
                                                     mysqli_query($conn, $query);
                                                     header('location: contactus.php');
                                             }
