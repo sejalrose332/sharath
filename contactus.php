@@ -114,7 +114,7 @@
                 <div class="form-content homecontect">
                     <div class="contact-form-action">
                         <h4>Get a Quote</h4>
-                        <form class="row messenger-box-form" method="get" action="contactus.php">
+                        <form class="row messenger-box-form" method="POST" action="contactus.php">
                             <div class="col-lg-6 responsive-column">
                                 <div class="input-box messenger-box-input-wrap">
                                     <label class="label-text" for="name">Your Name</label>
@@ -298,7 +298,7 @@
 </section>
 
             <?php
-                if (isset($_GET['submit'])) {
+                if (isset($_POST['submit'])) {
                     register();
                     }
             ?>
@@ -313,12 +313,12 @@
                     $dbname = 'enquiry';
                     $conn = mysqli_connect($dbservername,$dbusername,$dbpassword,$dbname);
 
-                    $YourName=$_GET['name'];
-                    $PhoneNo=$_GET['phone'];
-                    $EmailId=$_GET['email'];
-                    $Services=$_GET['fleets'];
-                    $TypeTravel=$_GET['travel'];
-                    $Dates = $_GET['date'];
+                    $YourName=$_POST['name'];
+                    $PhoneNo=$_POST['phone'];
+                    $EmailId=$_POST['email'];
+                    $Services=$_POST['fleets'];
+                    $TypeTravel=$_POST['typetravel'];
+                    $Dates = $_POST['date'];
                     $query = "INSERT INTO user(YourName, PhoneNo, EmailId, Services, TypeTravel, Dates) VALUES (?, ?, ?, ?, ?, ?)";
                                     mysqli_query($conn, $query);
                                     header('location: contactus.php');
