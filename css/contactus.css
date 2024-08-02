@@ -1,0 +1,61 @@
+/* Basic styling for the navbar */
+.navbar {
+    border-bottom: 1px solid #c53131; /* Optional: adds a border at the bottom */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #fff; /* White color for the brand */
+}
+
+.navbar-toggler {
+    border: none; /* Remove border around the toggler */
+}
+
+.navbar-toggler-icon {
+    background-image: url('path/to/your/hamburger-icon.png'); /* Custom hamburger icon */
+}
+
+/* Navbar links styling */
+.nav-link {
+    color: #fff; /* White color for links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav-link:hover {
+    color: #f8f9fa; /* Slightly lighter color on hover */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: #343a40; /* Dark background for dropdown */
+    border: none; /* Remove border */
+}
+
+.dropdown-item {
+    color: #fff; /* White color for dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #495057; /* Darker background on hover */
+}
+
+/* Disabled link styling */
+.nav-link.disabled {
+    color: #6c757d; /* Grey color for disabled links */
+}
+
+/* Form styling */
+.form-control {
+    border-radius: 0; /* Remove border-radius for a sharper look */
+}
+
+.btn-outline-success {
+    border-color: #339249; /* Custom border color */
+    color: #28a745; /* Custom text color */
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}
