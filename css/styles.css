@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.carousel-item {
+  height: 500px;
+}
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+.transports {
+  padding: 60px 0;
+}
+.contact-form {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+.contact-form form {
+  max-width: 600px;
+  margin: auto;
+}
+.animated {
+  animation: fadeInUp 1s ease-out;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-custom {
+  background: linear-gradient(
+    135deg,
+    #00aaff,
+    #0044cc
+  ); /* Gradient background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #ffffff; /* White color for text */
+}
+.navbar-custom .nav-link {
+  margin-left: 20px; /* Space between nav items */
+}
+.navbar-custom .nav-link:hover {
+  color: #ffcc00; /* Gold color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255,255,255,.5)" stroke-width="2" d="M4 6h22M4 15h22M4 24h22"/%3E%3C/svg%3E');
+}
+.banner {
+  background-image: url("images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid #0044cc; /* Bottom border matching navbar */
+}
+.banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.book-now-button {
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff5722; /* Vibrant color for visibility */
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: blink 1s infinite; /* Blinking effect */
+}
+.book-now-button:hover {
+  background-color: #e64a19; /* Darker shade on hover */
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.more-details {
+ background-color: #f8f9fa; /* Light background for contrast */
+ padding: 40px 0;
+}
