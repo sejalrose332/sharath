@@ -7,35 +7,47 @@ if (isset($_POST['submit'])) {
     register();
 }
 
-function register(){
-    $dbservername = 'localhost';
-    $dbusername = 'root';
-    $dbpassword = '';
-    $dbname = 'enquiry';
-    $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
+function register() {
+    // Remote database connection details
+    $dbservername = 'srv1641.hstgr.io'; // Replace with the remote host or IP address
+    $dbusername = 'su419624398_sharathtoursan';
+    $dbpassword = 'Newyorkcity2334';
+    $dbname = 'u419624398_sharathtours';
 
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    } else {
-        echo "Connected successfully<br>";
+    // Create a new connection
+    $conn =mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
+
+    // Check the connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error . " (" . $conn->connect_errno . ")");
     }
 
-    $YourName = mysqli_real_escape_string($conn, $_POST['name']);
-    $PhoneNo = mysqli_real_escape_string($conn, $_POST['phone']);
-    $EmailID = mysqli_real_escape_string($conn, $_POST['email']);
-    $Services = mysqli_real_escape_string($conn, $_POST['fleets']);
-    $TypeTravel = mysqli_real_escape_string($conn, $_POST['typetravel']);
-    $Dates = mysqli_real_escape_string($conn, $_POST['date']);
+    // Sanitize user input
+    $YourName = $conn->real_escape_string($_POST['name']);
+    $PhoneNo = $conn->real_escape_string($_POST['phone']);
+    $EmailID = $conn->real_escape_string($_POST['email']);
+    $Services = $conn->real_escape_string($_POST['fleets']);
+    $TypeTravel = $conn->real_escape_string($_POST['typetravel']);
+    $Dates = $conn->real_escape_string($_POST['date']);
 
-    $query = "INSERT INTO user (YourName, PhoneNo, EmailID, Services, TypeTravel, Dates) VALUES ('$YourName', '$PhoneNo', '$EmailID', '$Services', '$TypeTravel', '$Dates')";
+    // Prepare and bind
+    $query = $conn->prepare("INSERT INTO user (YourName, PhoneNo, EmailID, Services, TypeTravel, Dates) VALUES (?, ?, ?, ?, ?, ?)");
+    if ($query === false) {
+        die("Error preparing the query: " . $conn->error);
+    }
 
-    if (mysqli_query($conn, $query)) {
-        echo "New record created successfully";
+    $query->bind_param("ssssss", $YourName, $PhoneNo, $EmailID, $Services, $TypeTravel, $Dates);
+
+    // Execute the query
+    if ($query->execute()) {
         header('Location: contact.html');
+        exit(); // Make sure to call exit after a header redirect
     } else {
-        echo "Error: " . $query . "<br>" . mysqli_error($conn);
+        echo "Error: " . $query->error;
     }
 
-    mysqli_close($conn);
+    // Close the statement and connection
+    $query->close();
+    $conn->close();
 }
 ?>
