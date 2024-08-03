@@ -16,3 +16,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const videoElement = document.getElementById('car-video');
     videoElement.src = `videos/${getRandomVideo()}`;
 });
+
+
+
+$(document).ready(function() {
+    $('#scroll-to-contact').click(function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        $('html, body').animate({
+            scrollTop: $('#contact').offset().top
+        }, 1000); // Duration in milliseconds
+    });
+
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() + $(window).height() > $('#contact').offset().top) {
+            $('#contact').addClass('scrolled');
+        }
+    });
+});
+

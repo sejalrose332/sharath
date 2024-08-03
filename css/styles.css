@@ -2,6 +2,9 @@ body {
   font-family: Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 .carousel-item {
   height: 500px;
 }
@@ -15,14 +18,7 @@ body {
 .transports {
   padding: 60px 0;
 }
-.contact-form {
-  padding: 60px 0;
-  background-color: #f8f9fa;
-}
-.contact-form form {
-  max-width: 600px;
-  margin: auto;
-}
+
 .animated {
   animation: fadeInUp 1s ease-out;
 }
@@ -185,97 +181,264 @@ body {
 }
 
 .opening-animation {
- position: relative;
- height: 100vh;
- background: url('images/hero-bg.jpg') no-repeat center center/cover;
- display: flex;
- align-items: center;
- justify-content: center;
- color: #fff;
- overflow: hidden;
- text-align: center;
+  position: relative;
+  height: 100vh;
+  background: url("images/hero-bg.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
 }
 
 .opening-animation .overlay {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
- display: flex;
- align-items: center;
- justify-content: center;
- z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
 .opening-animation .container {
- position: relative;
- z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .main-heading {
- font-size: 3.5rem;
- font-weight: 700;
- animation: fadeInUp 2s ease-out;
+  font-size: 3.5rem;
+  font-weight: 700;
+  animation: fadeInUp 2s ease-out;
 }
 
 .sub-heading {
- font-size: 1.75rem;
- font-weight: 400;
- margin-top: 10px;
- animation: fadeInUp 2s ease-out 0.5s;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-top: 10px;
+  animation: fadeInUp 2s ease-out 0.5s;
 }
 
 .description {
- font-size: 1.25rem;
- margin-top: 20px;
- animation: fadeInUp 2s ease-out 1s;
+  font-size: 1.25rem;
+  margin-top: 20px;
+  animation: fadeInUp 2s ease-out 1s;
 }
 
 .animated-button {
- margin-top: 30px;
- padding: 10px 20px;
- font-size: 1.25rem;
- border: none;
- border-radius: 50px;
- background: #007bff;
- color: #fff;
- text-decoration: none;
- transition: background 0.3s, transform 0.3s;
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 50px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .animated-button:hover {
- background: #0056b3;
- transform: scale(1.1);
+  background: #0056b3;
+  transform: scale(1.1);
 }
 
 .car-illustration {
- position: absolute;
- top: 10px; /* Adjust distance from the top as needed */
- left: -150px; /* Start position off-screen */
- width: 100px; /* Adjust size as needed */
- height: auto;
- animation: driveAcross 10s linear infinite;
- z-index: 1;
+  position: absolute;
+  top: 10px; /* Adjust distance from the top as needed */
+  left: -150px; /* Start position off-screen */
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  animation: driveAcross 10s linear infinite;
+  z-index: 1;
 }
 
 @keyframes fadeInUp {
- from {
-     opacity: 0;
-     transform: translateY(20px);
- }
- to {
-     opacity: 1;
-     transform: translateY(0);
- }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes driveAcross {
- 0% {
-     transform: translateX(-150px); /* Start position */
- }
- 100% {
-     transform: translateX(calc(100vw + 150px)); /* End position */
- }
+  0% {
+    transform: translateX(-150px); /* Start position */
+  }
+  100% {
+    transform: translateX(calc(100vw + 150px)); /* End position */
+  }
+}
+
+.links-references {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  border-bottom: 2px solid #007bff;
+}
+
+.links-references h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.links-references h5 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.links-references ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.links-references li {
+  margin-bottom: 10px;
+}
+
+.links-references a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.links-references a:hover {
+  color: #0056b3;
+}
+
+.social-icons a {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.25rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #0056b3;
+}
+
+/* Background image or color for the whole section */
+.contact-form-container {
+  background: url("images/contact-background.jpg") no-repeat center center/cover;
+  padding: 80px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form-wrapper {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* White background with opacity */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form-wrapper h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+.contact-form-wrapper .form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s;
+}
+
+.contact-form-wrapper .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.contact-form-wrapper .form-group label {
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form-wrapper .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 1.125rem;
+  padding: 12px;
+  border-radius: 50px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.contact-form-wrapper .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 20px;
+  }
+
+  .contact-form-wrapper h2 {
+    font-size: 2rem;
+  }
+}
+
+.contact-form-container.scrolled {
+  opacity: 1;
+}
+
+.contact-form-container.scrolled {
+  opacity: 1;
+}
+
+.contact-form-wrapper {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* White background with opacity */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }

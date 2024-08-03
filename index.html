@@ -34,10 +34,10 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
+            <a class="nav-link" href="#contact">Contact Us</a>
           </li>
           <a href="#contact"
             ><button class="btn book-now-button" type="button">
@@ -50,23 +50,27 @@
 
     <!-- Opening Animation Section -->
     <section class="opening-animation">
-        <div class="overlay">
-            <div class="container text-center">
-                <h1 class="main-heading">Welcome to Sharath Tours and Travels</h1>
-                <p class="sub-heading">Your Journey Starts Here</p>
-                <p class="description">Experience luxury, comfort, and reliability with our top-notch cab services.</p>
-                <a href="#contact" class="btn btn-primary animated-button">Book Your Ride</a>
-            </div>
+      <div class="overlay">
+        <div class="container text-center">
+          <h1 class="main-heading">Welcome to Sharath Tours and Travels</h1>
+          <p class="sub-heading">Your Journey Starts Here</p>
+          <p class="description">
+            Experience luxury, comfort, and reliability with our top-notch services.
+          </p>
+          <a href="#contact" class="btn btn-primary animated-button"
+            >Book Your Ride</a
+          >
         </div>
-        <!-- Running Car MP4 Video -->
-        <video id="car-video" class="car-video" autoplay loop muted>
-            <!-- Video source will be dynamically set by JavaScript -->
-            Your browser does not support the video tag.
-        </video>
+      </div>
+      <!-- Running Car MP4 Video -->
+      <video id="car-video" class="car-video" autoplay loop muted>
+        <!-- Video source will be dynamically set by JavaScript -->
+        Your browser does not support the video tag.
+      </video>
     </section>
 
     <!-- Transports Section -->
-    <div class="container transports">
+    <div id="services" class="container transports">
       <h2 class="text-center animated">Our Transport Options</h2>
       <div class="row">
         <!-- Transports vehicles available-->
@@ -201,8 +205,8 @@
                     alt="Image 1"
                   />
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Image 1</h5>
-                    <p>Description for image 1.</p>
+                    <h5>Cabs</h5>
+                    <p>We offer a veriety of cabs raning form 4-8 seaters.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
@@ -212,8 +216,8 @@
                     alt="Image 2"
                   />
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Image 2</h5>
-                    <p>Description for image 2.</p>
+                    <h5>Bus</h5>
+                    <p>We take booking for long distance for huge crowd.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
@@ -223,8 +227,8 @@
                     alt="Image 3"
                   />
                   <div class="carousel-caption d-none d-md-block">
-                    <h5>Image 3</h5>
-                    <p>Description for image 3.</p>
+                    <h5>Tempo Travels</h5>
+                    <p>Visiting a place with extended family ? Out TT serves the travels.</p>
                   </div>
                 </div>
                 <!-- Add more images as needed -->
@@ -344,46 +348,111 @@
       </div>
     </div>
 
-    <!-- Contact Us Form -->
-    <div id="contact" class="container contact-form">
-      <h2 class="text-center animated">Contact Us</h2>
-      <form>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            placeholder="Your Name"
-          />
+<!-- Contact Us Form -->
+<div id="contact" class="contact-form-container">
+    <div class="contact-form-wrapper">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            id="name"
+                            placeholder="Your Name"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input
+                            type="email"
+                            class="form-control form-control-lg"
+                            id="email"
+                            placeholder="Your Email"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea
+                            class="form-control form-control-lg"
+                            id="message"
+                            rows="6"
+                            placeholder="Your Message"
+                            required
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                </form>
+            </div>
         </div>
-        <div class="form-group">
-          <label for="email">Email address</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="Your Email"
-          />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea
-            class="form-control"
-            id="message"
-            rows="4"
-            placeholder="Your Message"
-          ></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send</button>
-      </form>
     </div>
+</div>
+
+
+    <!-- Links and References Section -->
+    <section class="links-references">
+      <div class="container text-center">
+        <h2>Explore Our Website</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <h5>About Us</h5>
+            <ul class="list-unstyled">
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Help & Support</h5>
+            <ul class="list-unstyled">
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#terms">Terms of Service</a></li>
+              <li><a href="#privacy">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Follow Us</h5>
+            <ul class="list-unstyled social-icons">
+              <li><a href="#" class="facebook">Facebook</a></li>
+              <li><a href="#" class="twitter">Twitter</a></li>
+              <li><a href="#" class="instagram">Instagram</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Contact Us</h5>
+            <p>
+              Email:
+              <a href="mailto:info@sharathtravels.com"
+                >info@sharathtravels.com</a
+              >
+            </p>
+            <p>Phone: <a href="tel:+1234567890">+123-456-7890</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer text-center">
+      <div class="container">
+        <p>&copy; 2024 Sharath Tours and Travels. All rights reserved.</p>
+        <p>
+          Designed by
+          <a href="https://yourdesignagency.com" target="_blank">Habelash</a>
+        </p>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="jss/index.js"></script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
