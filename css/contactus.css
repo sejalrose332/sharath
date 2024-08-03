@@ -1,61 +1,238 @@
-/* Basic styling for the navbar */
-.navbar {
-    border-bottom: 1px solid #c53131; /* Optional: adds a border at the bottom */
+.navbar-custom
+{
+    background: linear-gradient(
+        135deg,
+        #00aaff,
+        #0044cc
+      ); /* Gradient background */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-brand {
-    font-weight: bold;
-    color: #fff; /* White color for the brand */
+/* General form styles */
+
+body {
+    background-color: #f8f9fa; /* Light grey background */
+    font-family: Arial, sans-serif; /* Default font */
+    padding: 20px; /* Padding around the body */
+    
 }
 
-.navbar-toggler {
-    border: none; /* Remove border around the toggler */
+.container {
+    max-width: 300px; /* Smaller width for the container */
+    background-color: #ffffff; /* White background */
+    padding: 30px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 50px auto; /* Center the container */
+    
 }
 
-.navbar-toggler-icon {
-    background-image: url('path/to/your/hamburger-icon.png'); /* Custom hamburger icon */
+h4 {
+    text-align: center; /* Center the heading text */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #343a40; /* Dark grey color for the heading */
 }
 
-/* Navbar links styling */
-.nav-link {
-    color: #fff; /* White color for links */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+.form-group label {
+    font-weight: bold; /* Bold labels */
+    color: #343a40; /* Dark grey color for the labels */
 }
 
-.nav-link:hover {
-    color: #f8f9fa; /* Slightly lighter color on hover */
-}
-
-/* Dropdown menu styling */
-.dropdown-menu {
-    background-color: #343a40; /* Dark background for dropdown */
-    border: none; /* Remove border */
-}
-
-.dropdown-item {
-    color: #fff; /* White color for dropdown items */
-}
-
-.dropdown-item:hover {
-    background-color: #495057; /* Darker background on hover */
-}
-
-/* Disabled link styling */
-.nav-link.disabled {
-    color: #6c757d; /* Grey color for disabled links */
-}
-
-/* Form styling */
 .form-control {
-    border-radius: 0; /* Remove border-radius for a sharper look */
+    border: 1px solid #1171d1; /* Border color */
+    border-radius: 4px; /* Rounded corners for input fields */
+    padding-left: 35px; /* Padding to make room for the icons */
+    
+}
+.form-control::hover{
+    background-color: #00aaff;
+
 }
 
-.btn-outline-success {
-    border-color: #339249; /* Custom border color */
-    color: #28a745; /* Custom text color */
+.form-icon {
+    position: absolute; /* Position the icon absolutely */
+    left: 10px; /* Align the icon to the left */
+    top: 40px;; /* Center the icon vertically */
+    transform: translateY(-50%); /* Center the icon vertically */
+    color: #0f74da; /* Color of the icon */
 }
 
-.btn-outline-success:hover {
-    background-color: #28a745; /* Background color on hover */
-    color: #fff; /* Text color on hover */
+.input-box {
+    position: relative; /* Parent of the icon */
+    margin-bottom: 15px; /* Space between input boxes */
 }
+
+.theme-btn {
+    background-color: #007bff; /* Primary button color */
+    border-color: #007bff; /* Border color for the button */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Larger font size for the button */
+    font-weight: bold; /* Bold button text */
+    border-radius: 4px; /* Rounded corners for the button */
+    color: #fff; /* White text color */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.theme-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #004085; /* Darker border on hover */
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .responsive-column {
+        flex: 0 0 48%; /* Two columns in a row */
+        max-width: 48%; /* Two columns in a row */
+    }
+}
+
+@media (max-width: 767px) {
+    .responsive-column {
+        flex: 0 0 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* General container styling */
+.contactus {
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    
+}
+
+/* Form Box */
+.form-box {
+    background-color: #00aaff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Address Book Styling */
+.address-book {
+    padding: 10px 0;
+}
+
+.contact-address {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-address li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-address li:last-child {
+    border-bottom: none;
+}
+
+/* Icon Styling */
+.icon-element {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #333;
+}
+
+/* Text Styling */
+.title1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.map__desc {
+    margin: 0;
+    color: hsl(224, 87%, 22%);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .contactus {
+        padding: 10px 0;
+    }
+
+    .form-box {
+        padding: 15px;
+    }
+
+    .contact-address li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .icon-element {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+.footer {
+    background-color: #1973cc; /* Light grey background, adjust as needed */
+    padding: 1rem 0; /* Adjust padding for spacing */
+    border-top: 1px solid #366391; /* Optional border for visual separation */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-text {
+    margin: 0;
+    color: #6c757d; /* Text color, adjust as needed */
+  }
+  
+  .footer-text a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .footer-text a:hover {
+    text-decoration: underline; /* Underline on hover for better visibility */
+  }
+  .navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #ffffff; /* White color for text */
+}
+.navbar-custom .nav-link {
+  margin-left: 20px; /* Space between nav items */
+}
+.navbar-custom .nav-link:hover {
+  color: #ffcc00; /* Gold color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+.book-now-button {
+    display: inline-block;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff5722; /* Vibrant color for visibility */
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: blink 1s infinite; /* Blinking effect */
+  }
+  .book-now-button:hover {
+    background-color: #e64a19; /* Darker shade on hover */
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+
