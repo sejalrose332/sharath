@@ -442,3 +442,19 @@ html {
   position: relative;
   z-index: 1;
 }
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px; /* Adjust based on your needs */
+}
+
+/* Custom CSS for card spacing */
+.card {
+  margin-bottom: 30px; /* Adjust the spacing between rows of cards */
+}
+
+/* Optional: Adds space to the top and bottom of the row */
+.row {
+  margin-top: 15px; /* Compensates for the negative margin */
+  margin-bottom: -15px;
+}
