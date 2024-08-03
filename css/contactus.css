@@ -13,7 +13,6 @@
 body {
     background-color: #f8f9fa; /* Light grey background */
     font-family: Arial, sans-serif; /* Default font */
-    padding: 20px; /* Padding around the body */
     
 }
 
@@ -173,66 +172,3 @@ h4 {
         margin-bottom: 10px;
     }
 }
-.footer {
-    background-color: #1973cc; /* Light grey background, adjust as needed */
-    padding: 1rem 0; /* Adjust padding for spacing */
-    border-top: 1px solid #366391; /* Optional border for visual separation */
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .footer-text {
-    margin: 0;
-    color: #6c757d; /* Text color, adjust as needed */
-  }
-  
-  .footer-text a {
-    color: #007bff; /* Link color */
-    text-decoration: none; /* Remove underline */
-  }
-  
-  .footer-text a:hover {
-    text-decoration: underline; /* Underline on hover for better visibility */
-  }
-  .navbar-custom .navbar-brand,
-.navbar-custom .nav-link {
-  color: #ffffff; /* White color for text */
-}
-.navbar-custom .nav-link {
-  margin-left: 20px; /* Space between nav items */
-}
-.navbar-custom .nav-link:hover {
-  color: #ffcc00; /* Gold color on hover */
-  text-decoration: underline; /* Underline on hover */
-}
-.book-now-button {
-    display: inline-block;
-    font-weight: bold;
-    color: #fff;
-    background-color: #ff5722; /* Vibrant color for visibility */
-    border: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: blink 1s infinite; /* Blinking effect */
-  }
-  .book-now-button:hover {
-    background-color: #e64a19; /* Darker shade on hover */
-  }
-  @keyframes blink {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
-  
-
