@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Array of video file names
     const videos = [
-        '../videos/taxi.mp4',
-        '../videos/taxi.mp4',
-        '../videos/taxi.mp4'
+        '../videos/banner.mp4',
+        '../videos/banner.mp4',
+        '../videos/banner.mp4'
     ];
 
     // Function to get a random video
@@ -33,4 +33,3 @@ $(document).ready(function() {
         }
     });
 });
-
