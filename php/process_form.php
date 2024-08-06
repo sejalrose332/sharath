@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Execute the statement
             if ($stmt->execute()) {
-                header("Location: ../html/success.php");  // Redirect to a success page
+                header("Location: ../html/success.html");  // Redirect to a success page
                 exit();
             } else {
                 echo "Error: " . $stmt->error;
