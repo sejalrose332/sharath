@@ -557,7 +557,6 @@ html {
 }
 
 .btn {
-  display: flex; /* Use flexbox to center text */
   align-items: center; /* Center text vertically */
   justify-content: center; /* Center text horizontally */
   padding: 10px 20px;
