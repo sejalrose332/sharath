@@ -20,10 +20,11 @@ if ($conn->connect_error) {
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
+$phone = $_POST['phone'];
 
 // Prepare and bind
-$stmt = $conn->prepare("INSERT INTO contact_form (name, email, message) VALUES (?, ?, ?)");
-$stmt->bind_param("sss", $name, $email, $message);
+$stmt = $conn->prepare("INSERT INTO contact_form (name, email, phone, message) VALUES (?, ?, ?,?)");
+$stmt->bind_param("ssss", $name, $email, $phone , $message);
 
 // Execute statement
 if ($stmt->execute()) {

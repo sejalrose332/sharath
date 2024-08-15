@@ -571,3 +571,23 @@ html {
   line-height: 1; /* Ensure consistent vertical alignment */
   white-space: nowrap; /* Prevent text from wrapping */
 }
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #25D366; /* WhatsApp green */
+  transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E; /* Darker green for hover effect */
+}
+
+.btn-whatsapp i {
+  margin-right: 8px; /* Space between icon and text */
+}
